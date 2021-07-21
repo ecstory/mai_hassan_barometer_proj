@@ -1,5 +1,5 @@
 library(readr)
-afb_full_r6 <- read_csv("~/Downloads/afb_full_r6.csv")
+AfroRoundVI <- read_csv(url("https://media.githubusercontent.com/media/ecstory/mai_hassan_barometer_proj/main/AfroRoundVI.csv"))
 
 AfroRoundVI_RelevantTest <- afb_full_r6[! (afb_full_r6$country==2 | afb_full_r6$country==3 | afb_full_r6$country==4 | afb_full_r6$country==5 | afb_full_r6$country==6 | afb_full_r6$country==7 | afb_full_r6$country==8 | afb_full_r6$country==10 | afb_full_r6$country==11 | afb_full_r6$country==12 | afb_full_r6$country==13 | afb_full_r6$country==14 | afb_full_r6$country==15 | afb_full_r6$country==16 | afb_full_r6$country==17 | afb_full_r6$country==18 | afb_full_r6$country==19 | afb_full_r6$country==21 | afb_full_r6$country==22 | afb_full_r6$country==23 | afb_full_r6$country==24 | afb_full_r6$country==25 | afb_full_r6$country==26 | afb_full_r6$country==27 | afb_full_r6$country==29 | afb_full_r6$country==30 | afb_full_r6$country==31 | afb_full_r6$country==33 | afb_full_r6$country==34 | afb_full_r6$country==35 | afb_full_r6$country==36),]
 
