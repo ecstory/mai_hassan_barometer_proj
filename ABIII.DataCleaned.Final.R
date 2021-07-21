@@ -1,8 +1,5 @@
 library(readr)
-ABIII_English_Test <- read_csv(url("https://media.githubusercontent.com/media/ecstory/mai_hassan_barometer_proj/main/ABIII_English_GitTest2.csv"))
-
-ABIII_English <- read_csv("~/Downloads/ABIII_English.csv")
-
+ABIII_English <- read_csv(url("https://media.githubusercontent.com/media/ecstory/mai_hassan_barometer_proj/main/ABIII_English_GitTest2.csv"))
 view(ABIII_English)
 
 ABIII_English_Relevant <- ABIII_English[! (ABIII_English$country=="Bahrain" | ABIII_English$country=="Iraq" | ABIII_English$country=="Jordan" | ABIII_English$country=="Kuwait" | ABIII_English$country=="Lebanon" | ABIII_English$country=="Libya" | ABIII_English$country=="Palestine" | ABIII_English$country=="Saudi Arabia" | ABIII_English$country=="Yemen"),]
