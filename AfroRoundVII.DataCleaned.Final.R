@@ -1,10 +1,5 @@
-library(haven)
-r7_merged_data_34ctry_release <- read_sav("https://afrobarometer.org/sites/default/files/data/round-7/r7_merged_data_34ctry.release.sav")
-
-write.csv(r7_merged_data_34ctry_release, "/Users/ethanstory/Downloads/AfroRoundVII.csv", row.names = TRUE)
-
 library(readr)
-AfroRoundVII <- read_csv("~/Downloads/AfroRoundVII.csv")
+AfroRoundVII <- read_csv(url("https://media.githubusercontent.com/media/ecstory/mai_hassan_barometer_proj/main/AfroRoundVII.csv"))
 
 AfroRoundVII_RelevantTest <- AfroRoundVII[! (AfroRoundVII$COUNTRY==1 | AfroRoundVII$COUNTRY==2 | AfroRoundVII$COUNTRY==3 | AfroRoundVII$COUNTRY==4 | AfroRoundVII$COUNTRY==5 | AfroRoundVII$COUNTRY==6 | AfroRoundVII$COUNTRY==7 | AfroRoundVII$COUNTRY==8 | AfroRoundVII$COUNTRY==9 | AfroRoundVII$COUNTRY==10 | AfroRoundVII$COUNTRY==11 | AfroRoundVII$COUNTRY==12 | AfroRoundVII$COUNTRY==13 | AfroRoundVII$COUNTRY==14 | AfroRoundVII$COUNTRY==15 | AfroRoundVII$COUNTRY==16 | AfroRoundVII$COUNTRY==17 | AfroRoundVII$COUNTRY==18 | AfroRoundVII$COUNTRY==20 | AfroRoundVII$COUNTRY==21 | AfroRoundVII$COUNTRY==22 | AfroRoundVII$COUNTRY==23 | AfroRoundVII$COUNTRY==24 | AfroRoundVII$COUNTRY==25 | AfroRoundVII$COUNTRY==26 | AfroRoundVII$COUNTRY==27 | AfroRoundVII$COUNTRY==29 | AfroRoundVII$COUNTRY==30 | AfroRoundVII$COUNTRY==32 | AfroRoundVII$COUNTRY==33 | AfroRoundVII$COUNTRY==34),]
 
