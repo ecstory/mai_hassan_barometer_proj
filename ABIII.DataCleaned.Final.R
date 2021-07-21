@@ -1,4 +1,6 @@
 library(readr)
+ABIII_English_Test <- read_csv(url("https://media.githubusercontent.com/media/ecstory/mai_hassan_barometer_proj/main/ABIII_English_GitTest2.csv"))
+
 ABIII_English <- read_csv("~/Downloads/ABIII_English.csv")
 
 view(ABIII_English)
