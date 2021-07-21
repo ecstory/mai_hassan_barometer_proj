@@ -1,5 +1,5 @@
 library(readr)
-ABIV_English <- read_csv("~/Downloads/ABIV_English.csv")
+ABIV_English <- read_csv(url("https://media.githubusercontent.com/media/ecstory/mai_hassan_barometer_proj/main/ABIV_English.csv"))
 
 view(ABIV_English)
 
@@ -528,11 +528,4 @@ ABIV_English_RemoveColumnTest$q6064[ABIV_English_RemoveColumnTest$q6064 == "Decl
 ABIV_English_RemoveColumnTest$q6064 = as.numeric(as.character(ABIV_English_RemoveColumnTest$q6064))
 typeof(ABIV_English_RemoveColumnTest$q6064)
 
-
-
-
-
-
-
-
-
+summary(ABIV_English_RemoveColumnTest)
