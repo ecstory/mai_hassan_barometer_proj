@@ -1,0 +1,12 @@
+library(haven)
+merged_round_5_data_34_countries_2011_2013_last_update_july_2015 <- read_sav("https://afrobarometer.org/sites/default/files/data/round-5/merged-round-5-data-34-countries-2011-2013-last-update-july-2015.sav")
+
+write.csv(merged_round_5_data_34_countries_2011_2013_last_update_july_2015, "/Users/ethanstory/Downloads/AfroRoundV.csv", row.names = TRUE)
+
+library(readr)
+AfroRoundV <- read_csv("~/Downloads/AfroRoundV.csv")
+
+AfroRoundV_RelevantTest2 <- AfroRoundV[! (AfroRoundV$COUNTRY_ALPHA==2 | AfroRoundV$COUNTRY_ALPHA==3 | AfroRoundV$COUNTRY_ALPHA==4 | AfroRoundV$COUNTRY_ALPHA==5 | AfroRoundV$COUNTRY_ALPHA==6 | AfroRoundV$COUNTRY_ALPHA==7 | AfroRoundV$COUNTRY_ALPHA==8 | AfroRoundV$COUNTRY_ALPHA==11 | AfroRoundV$COUNTRY_ALPHA==12 | AfroRoundV$COUNTRY_ALPHA==13 | AfroRoundV$COUNTRY_ALPHA==14 | AfroRoundV$COUNTRY_ALPHA==15 | AfroRoundV$COUNTRY_ALPHA==16 | AfroRoundV$COUNTRY_ALPHA==17 | AfroRoundV$COUNTRY_ALPHA==18 | AfroRoundV$COUNTRY_ALPHA==19 | AfroRoundV$COUNTRY_ALPHA==21 | AfroRoundV$COUNTRY_ALPHA==22 | AfroRoundV$COUNTRY_ALPHA==23 | AfroRoundV$COUNTRY_ALPHA==24 | AfroRoundV$COUNTRY_ALPHA==25 | AfroRoundV$COUNTRY_ALPHA==26 | AfroRoundV$COUNTRY_ALPHA==27 | AfroRoundV$COUNTRY_ALPHA==29 | AfroRoundV$COUNTRY_ALPHA==30 | AfroRoundV$COUNTRY_ALPHA==31 | AfroRoundV$COUNTRY_ALPHA==33 | AfroRoundV$COUNTRY_ALPHA==34 | AfroRoundV$COUNTRY_ALPHA==35),]
+
+AfroRoundV_RemoveColumnTest <- AfroRoundV_RelevantTest2 [c("X1", "COUNTRY", "COUNTRY_ALPHA", "COUNTRY.BY.REGION.NO", "COUNTRY.BY.REGION", "RESPNO", "URBRUR", "REGION", "Q3A", "Q3B", "Q4", "Q6A", "Q6B", "Q87", "Q9A", "Q9B", "Q56B", "Q59A", "Q59B", "Q59C", "Q59D", "Q59E", "Q59F", "Q59G", "Q59H", "Q59I", "Q59J", "Q65A", "Q65B", "Q65C", "Q65D", "Q65E", "Q65F", "Q65G", "Q65H", "Q65I", "Q65J", "Q65K", "Q65L", "Q65M", "Q65N", "Q65P", "Q60A", "Q60B", "Q60C", "Q60D", "Q60E", "Q60F", "Q60G", "Q49", "Q16", "Q27", "Q29A", "Q29B", "Q29C", "Q28", "Q14", "Q13A", "Q13B", "Q13C", "Q13D", "Q91A", "Q91B", "Q94A_ARB", "Q94B_ARB", "Q94C_ARB", "Q25A", "Q25B", "Q89A", "Q26A", "Q26B", "Q26C", "Q26D", "Q26E", "Q89B", "Q43", "Q42", "Q44", "Q45", "Q43A_ARB", "Q43B_ARB", "Q43C_ARB", "Q43D_ARB", "Q43E_ARB", "Q41A_ARB", "Q41B_ARB", "Q41C_ARB", "Q41D_ARB")]
+summary(AfroRoundV_RemoveColumnTest)
