@@ -1,10 +1,5 @@
-library(haven)
-merged_round_5_data_34_countries_2011_2013_last_update_july_2015 <- read_sav("https://afrobarometer.org/sites/default/files/data/round-5/merged-round-5-data-34-countries-2011-2013-last-update-july-2015.sav")
-
-write.csv(merged_round_5_data_34_countries_2011_2013_last_update_july_2015, "/Users/ethanstory/Downloads/AfroRoundV.csv", row.names = TRUE)
-
 library(readr)
-AfroRoundV <- read_csv("~/Downloads/AfroRoundV.csv")
+AfroRoundV <- read_csv (url("https://media.githubusercontent.com/media/ecstory/mai_hassan_barometer_proj/main/AfroRoundV.csv"))
 
 AfroRoundV_RelevantTest2 <- AfroRoundV[! (AfroRoundV$COUNTRY_ALPHA==2 | AfroRoundV$COUNTRY_ALPHA==3 | AfroRoundV$COUNTRY_ALPHA==4 | AfroRoundV$COUNTRY_ALPHA==5 | AfroRoundV$COUNTRY_ALPHA==6 | AfroRoundV$COUNTRY_ALPHA==7 | AfroRoundV$COUNTRY_ALPHA==8 | AfroRoundV$COUNTRY_ALPHA==11 | AfroRoundV$COUNTRY_ALPHA==12 | AfroRoundV$COUNTRY_ALPHA==13 | AfroRoundV$COUNTRY_ALPHA==14 | AfroRoundV$COUNTRY_ALPHA==15 | AfroRoundV$COUNTRY_ALPHA==16 | AfroRoundV$COUNTRY_ALPHA==17 | AfroRoundV$COUNTRY_ALPHA==18 | AfroRoundV$COUNTRY_ALPHA==19 | AfroRoundV$COUNTRY_ALPHA==21 | AfroRoundV$COUNTRY_ALPHA==22 | AfroRoundV$COUNTRY_ALPHA==23 | AfroRoundV$COUNTRY_ALPHA==24 | AfroRoundV$COUNTRY_ALPHA==25 | AfroRoundV$COUNTRY_ALPHA==26 | AfroRoundV$COUNTRY_ALPHA==27 | AfroRoundV$COUNTRY_ALPHA==29 | AfroRoundV$COUNTRY_ALPHA==30 | AfroRoundV$COUNTRY_ALPHA==31 | AfroRoundV$COUNTRY_ALPHA==33 | AfroRoundV$COUNTRY_ALPHA==34 | AfroRoundV$COUNTRY_ALPHA==35),]
 
