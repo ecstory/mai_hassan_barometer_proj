@@ -1,5 +1,5 @@
 library(readr)
-ABV_Release_Data <- read_csv("~/Downloads/ABV_Release_Data.csv")
+ABV_Release_Data <- read_csv(url("https://media.githubusercontent.com/media/ecstory/mai_hassan_barometer_proj/main/ABV_Release_Data.csv"))
 
 ABV_English_Relevant <- ABV_Release_Data[! (ABV_Release_Data$country==7 | ABV_Release_Data$country==8 | ABV_Release_Data$country==9 | ABV_Release_Data$country==10 | ABV_Release_Data$country==11 | ABV_Release_Data$country==15 | ABV_Release_Data$country==22),]
 
