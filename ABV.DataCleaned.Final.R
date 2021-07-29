@@ -6,3 +6,11 @@ ABV_English_Relevant <- ABV_Release_Data[! (ABV_Release_Data$country==7 | ABV_Re
 ABV_English_RemoveColumnTest <- ABV_English_Relevant [c("id", "country", "psu", "splita", "splitb", "wave", "q1", "a1", "q13", "wt", "stratum", "sample", "mode", "Q101", "Q101A", "Q102", "Q105", "Q201A_1", "Q201A_2", "Q201A_3", "Q201A_5", "Q201A_41", "Q201A_42", "Q201A_7", "Q201B_6", "Q201B_13", "Q201B_20", "Q201B_31", "Q201B_12", "Q204A_1", "Q204A_2", "Q513", "Q204_2", "Q204_3", "Q204_11", "Q204_20", "Q204_22", "Q204B_13", "Q204B_15", "Q204C_13", "Q204C_15", "Q205_4", "Q205_1", "Q210", "Q211", "Q211A", "Q501", "Q502_1", "Q502_2", "Q502_4", "Q301A", "Q301B", "Q303A", "Q302", "Q503A", "Q601A", "Q516A", "Q511", "Q512", "Q423_1", "Q423_2", "Q423_3", "Q409", "Q521_1", "Q521_4", "Q521_5", "Q1017")]
 
 summary(ABV_English_RemoveColumnTest)
+
+# Mark all responses coded as a 97 ("DNR") as NA in order equalize with Afrobarometer.
+ABV_TestNA <- ABV_English_RemoveColumnTest %>% replace_with_na_all(condition = ~.x == 97)
+# Mark all responses coded as a 98 ("DNR") as NA in order equalize with Afrobarometer.
+ABV_TestNA2 <- ABV_TestNA %>% replace_with_na_all(condition = ~.x == 98)
+# Mark all responses coded as a 99 ("DNR") as NA in order equalize with Afrobarometer.
+ABV_TestNA3 <- ABV_TestNA2 %>% replace_with_na_all(condition = ~.x == 99)
+summary(ABV_TestNA3)

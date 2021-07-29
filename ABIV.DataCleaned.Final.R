@@ -529,3 +529,11 @@ ABIV_English_RemoveColumnTest$q6064 = as.numeric(as.character(ABIV_English_Remov
 typeof(ABIV_English_RemoveColumnTest$q6064)
 
 summary(ABIV_English_RemoveColumnTest)
+
+# Mark all responses coded as a 97 ("DNR") as NA in order equalize with Afrobarometer.
+ABIV_TestNA <- ABIV_English_RemoveColumnTest %>% replace_with_na_all(condition = ~.x == 97)
+# Mark all responses coded as a 98 ("DNR") as NA in order equalize with Afrobarometer.
+ABIV_TestNA2 <- ABIV_TestNA %>% replace_with_na_all(condition = ~.x == 98)
+# Mark all responses coded as a 99 ("DNR") as NA in order equalize with Afrobarometer.
+ABIV_TestNA3 <- ABIV_TestNA2 %>% replace_with_na_all(condition = ~.x == 99)
+summary(ABIV_TestNA3)

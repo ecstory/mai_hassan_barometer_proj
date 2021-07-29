@@ -547,3 +547,8 @@ typeof(ABIII_English_RemoveColumnTest$q6066)
 
 summary(ABIII_English_RemoveColumnTest)
 
+# Mark all responses coded as a 8 ("DNR") as NA in order equalize with Afrobarometer.
+ABIII_TestNA <- ABIII_English_RemoveColumnTest %>% replace_with_na_all(condition = ~.x == 8)
+# Mark all responses coded as a 9 ("DNR") as NA in order equalize with Afrobarometer.
+ABIII_TestNA2 <- ABIII_TestNA %>% replace_with_na_all(condition = ~.x == 9)
+summary(ABIII_TestNA2)
